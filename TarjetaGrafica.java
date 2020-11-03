@@ -66,14 +66,20 @@ public class TarjetaGrafica {
      * Imprime por pantalla los detalles del objeto.
      */
     public void imprimeDetalles(){
-        System.out.println("Gama: " + gama + " | Cantidad de RAM: " + cantidadRam + "GB de RAM | Funciona: " + funciona);
+        System.out.println(estado());
     }
     
     /**
      * Devuelve un String con los valores del atributo.
-     */
+    */
     public String estado(){
-        String estadoGrafica ="Gama: " + gama + " | Cantidad de RAM: " + cantidadRam + "GB de RAM | Funciona: " + funciona;
+        String funcionaSiNo;
+        if (funciona == true) {
+            funcionaSiNo = "si";
+        } else {
+            funcionaSiNo = "no";
+        }
+        String estadoGrafica ="Gama: " + gama + " | Cantidad de RAM: " + cantidadRam + "GB de RAM | Funciona: " + funcionaSiNo;
         return estadoGrafica;
     }
 }
